@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pengembaraan Kucing | Game Pendidikan RM10.90</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap');
+:root{--ink:#172033;--purple:#6d45d9;--pink:#ed4f91;--gold:#ffc83d;--soft:#f7f4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fbfafc;color:var(--ink);font-family:Nunito,sans-serif}h1,h2,h3{font-family:Fredoka;margin:0}.container{width:min(1120px,92%);margin:auto}
+.hero{min-height:820px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#ffd9ed 0 10%,transparent 27%),linear-gradient(135deg,#5140b9,#8b5cf6 48%,#ec6ba5);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff5 1px,transparent 1px);background-size:28px 28px;opacity:.25}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:3}.brand{font-size:22px;font-weight:900;display:flex;gap:9px;align-items:center}.nav a{background:#ffffff18;border:1px solid #fff5;padding:10px 16px;border-radius:99px;font-weight:900}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr .92fr;gap:55px;align-items:center;padding:65px 0 90px}.eyebrow{display:inline-flex;background:#ffffff18;border:1px solid #ffffff38;padding:9px 14px;border-radius:99px;font-size:13px;font-weight:900;letter-spacing:.5px}
+h1{font-size:clamp(48px,7vw,78px);line-height:.98;margin:18px 0;text-shadow:0 6px 0 #37228a55}.hero-copy{font-size:19px;line-height:1.65;font-weight:700;color:#fff}.price-row{display:flex;align-items:center;gap:15px;margin:26px 0}.price{font-family:Fredoka;font-size:58px;font-weight:700}.price-tag{background:#ffe071;color:#694400;padding:8px 13px;border-radius:10px;font-weight:900}.cta{display:inline-flex;background:linear-gradient(#ff719f,#e73579);border:0;color:#fff;padding:16px 25px;border-radius:16px;font-size:18px;font-weight:900;box-shadow:0 8px 0 #ad2458,0 18px 35px #32156b55;transition:.2s}.cta:hover{transform:translateY(-3px);box-shadow:0 11px 0 #ad2458,0 22px 35px #32156b55}.trust{margin-top:18px;font-size:13px;font-weight:800;opacity:.9}
+
+.demo-shell{background:#fff;border-radius:30px;padding:12px;box-shadow:0 35px 80px #21104d66;transform:rotate(1deg);animation:float 4s ease-in-out infinite}.demo{height:535px;border-radius:21px;overflow:hidden;position:relative;background:linear-gradient(#75cfff,#bdeeff 55%,#76d36e 56%);color:#263238}.demo-top{display:flex;justify-content:space-between;padding:14px;font-weight:900}.demo-pill{background:#ffffffe8;border-radius:12px;padding:8px 12px}.cat{position:absolute;bottom:72px;left:50%;font-size:67px;transform:translateX(-50%);filter:drop-shadow(0 7px 5px #0004);animation:catbob 1.5s infinite}.letter{position:absolute;width:66px;height:66px;background:#fff;border:4px solid #ec4f91;border-radius:50%;display:grid;place-items:center;font:700 38px Fredoka;box-shadow:0 10px 18px #0002;animation:fall 3s linear infinite}.l1{left:18%;top:-80px;animation-delay:.1s}.l2{left:47%;top:-90px;animation-delay:1s}.l3{left:73%;top:-100px;animation-delay:1.8s}.instruction{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);background:#fffffff5;border:4px solid var(--gold);color:#e73579;border-radius:19px;padding:12px 18px;font:700 22px Fredoka;text-align:center;box-shadow:0 15px 35px #0002;width:max-content;max-width:85%;animation:pop 2.8s infinite}.demo-bottom{position:absolute;bottom:0;left:0;right:0;padding:12px 15px;background:#ffffffe8;display:flex;justify-content:space-between;font-weight:900}.spark{position:absolute;font-size:30px;animation:twinkle 1.5s infinite alternate}.sp1{top:18%;left:5%}.sp2{top:30%;right:7%;animation-delay:.5s}.sp3{bottom:28%;left:10%;animation-delay:1s}
+.section{padding:85px 0}.section.alt{background:var(--soft)}.center{text-align:center}.eyebrow-dark{display:inline-block;color:var(--purple);background:#eee9ff;padding:8px 13px;border-radius:99px;font-size:12px;font-weight:900}.section h2{font-size:45px;margin:12px 0;color:#25233a}.lead{max-width:700px;margin:0 auto 45px;color:#697386;font-size:17px;line-height:1.65;font-weight:700}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.benefit{background:#fff;border-radius:24px;padding:28px;border:1px solid #eeeaf6;box-shadow:0 12px 35px #2920440b;transition:.25s}.benefit:hover{transform:translateY(-7px)}.benefit-icon{font-size:42px}.benefit h3{font-size:23px;margin:14px 0 7px}.benefit p{color:#6b7280;line-height:1.6;font-weight:700}
+.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.level{background:#fff;border-radius:22px;padding:23px 13px;text-align:center;box-shadow:0 12px 30px #2920440d;position:relative;overflow:hidden}.level:after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#62c8ff,#ed65a2,#8b5cf6)}.level .emoji{font-size:48px;animation:float2 3s ease-in-out infinite}.level h3{font-size:18px;color:#5138ad;margin:10px 0 6px}.level p{margin:0;font-size:13px;color:#70798a;font-weight:800;line-height:1.45}
+.offer{background:linear-gradient(135deg,#19152e,#33256d);color:#fff;padding:90px 0;position:relative;overflow:hidden}.offer h2{color:#fff}.offer-card{max-width:760px;margin:35px auto 0;background:#fff;color:#202338;border-radius:30px;padding:35px;display:grid;grid-template-columns:1fr 1fr;gap:30px;box-shadow:0 25px 70px #0005}.offer-price{font:700 68px Fredoka;color:#e73579}.checks{font-weight:900;line-height:2}.checks span{display:block}.buy{text-align:center;margin-top:28px}.buy .cta{font-size:20px;padding:17px 30px}.small{font-size:12px;color:#8891a3;font-weight:700;margin-top:13px}
+.faq{max-width:820px;margin:auto}.faq details{background:#fff;border:1px solid #ece9f4;border-radius:16px;padding:18px 20px;margin:12px 0;box-shadow:0 6px 20px #29204408;font-weight:800}.faq summary{cursor:pointer;color:#5138ad}
+footer{padding:35px;text-align:center;color:#7b8495;font-weight:800}
+@keyframes float{50%{transform:translateY(-9px) rotate(1deg)}}@keyframes catbob{50%{transform:translate(-50%,-9px)}}@keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(620px) rotate(180deg)}}@keyframes pop{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.05)}}@keyframes twinkle{from{opacity:.4;transform:scale(.8)}to{opacity:1;transform:scale(1.15)}}@keyframes float2{50%{transform:translateY(-6px)}}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:35px}.demo-shell{transform:none}.benefits{grid-template-columns:1fr 1fr}.levels{grid-template-columns:repeat(2,1fr)}.offer-card{grid-template-columns:1fr}.hero{min-height:auto}}
+@media(max-width:520px){.nav a{display:none}.benefits{grid-template-columns:1fr}.section{padding:65px 0}.section h2{font-size:37px}.demo{height:470px}.price{font-size:52px}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="container">
+<nav class="nav"><div class="brand">🐱 Pengembaraan Kucing</div><a href="#beli">RM10.90 SAHAJA</a></nav>
+<div class="hero-grid">
+<div>
+<div class="eyebrow">✦ GAME PENDIDIKAN DIGITAL UNTUK KANAK-KANAK</div>
+<h1>Belajar Huruf & Nombor Dengan Cara Yang Mereka Suka.</h1>
+<p class="hero-copy">Satu pengembaraan interaktif bersama kucing comel — anak mendengar arahan, mencari, menangkap, memecahkan, menarik dan mengetuk untuk menyelesaikan setiap cabaran.</p>
+<div class="price-row"><div class="price">RM10.90</div><div class="price-tag">SEKALI BAYAR</div></div>
+<a class="cta" href="https://toyyibpay.com/Pengembaraan-Abjad-dan-Nombor" target="_blank" rel="noopener">💳 DAPATKAN PERMAINAN</a>
+<div class="trust">✓ 5 tahap &nbsp; ✓ Arahan suara &nbsp; ✓ Aktiviti interaktif</div>
+</div>
+<div class="demo-shell">
+<div class="demo">
+<div class="demo-top"><div class="demo-pill">🎯 Tangkap:</div><div class="demo-pill">⭐ 120</div></div>
+<div class="spark sp1">✨</div><div class="spark sp2">⭐</div><div class="spark sp3">🌟</div>
+<div class="instruction">🔊 Tangkap huruf A!</div>
+<div class="letter l1">A</div><div class="letter l2">E</div><div class="letter l3">I</div>
+<div class="cat">🐱🎒</div>
+<div class="demo-bottom"><span>⭐⭐⭐</span><span>3 / 5</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container center">
+<div class="eyebrow-dark">KENAPA BERBEZA?</div><h2>Bukan Sekadar Game. Ia Pengalaman Belajar.</h2>
+<p class="lead">Reka bentuk permainan menggabungkan arahan suara, visual, sentuhan dan ganjaran supaya anak kekal terlibat ketika mengenal huruf dan nombor.</p>
+<div class="benefits">
+<div class="benefit"><div class="benefit-icon">👂</div><h3>Latih Mendengar</h3><p>Anak belajar mendengar dan memahami arahan sebelum melakukan tindakan.</p></div>
+<div class="benefit"><div class="benefit-icon">🔤</div><h3>Kenal Huruf & Nombor</h3><p>Huruf dan nombor dipersembahkan melalui cabaran yang berbeza, bukan sekadar paparan biasa.</p></div>
+<div class="benefit"><div class="benefit-icon">🖐️</div><h3>Koordinasi Tangan-Mata</h3><p>Gerakan, ketukan dan aktiviti tarik membantu menjadikan pembelajaran lebih aktif.</p></div>
+<div class="benefit"><div class="benefit-icon">🧠</div><h3>Fokus & Tindak Balas</h3><p>Anak perlu memberi perhatian kepada sasaran dan bertindak dengan tepat.</p></div>
+<div class="benefit"><div class="benefit-icon">🏆</div><h3>Markah & Kemajuan</h3><p>Skor, nyawa dan bar kemajuan memberikan maklum balas segera kepada pemain.</p></div>
+<div class="benefit"><div class="benefit-icon">🌈</div><h3>5 Dunia Berbeza</h3><p>Setiap tahap mempunyai tema dan cara bermain tersendiri untuk mengelakkan cepat bosan.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="container center"><div class="eyebrow-dark">5 TAHAP PENGEMBARAAN</div><h2>Setiap Tahap Ada Cabaran Baharu.</h2><p class="lead">Daripada hutan hingga istana ajaib, kucing kecil ini membawa anak meneroka lima dunia pembelajaran.</p>
+<div class="levels">
+<div class="level"><div class="emoji">🌳</div><h3>Hutan Vokal</h3><p>Tangkap A, E, I, O, U</p></div>
+<div class="level"><div class="emoji">🏖️</div><h3>Pantai Konsonan</h3><p>Cari B, C, D, F, G</p></div>
+<div class="level"><div class="emoji">🚀</div><h3>Angkasa Nombor</h3><p>Pecahkan 1 hingga 5</p></div>
+<div class="level"><div class="emoji">⛄</div><h3>Gunung Salji</h3><p>Tarik M, N, P, S, T</p></div>
+<div class="level"><div class="emoji">🎩</div><h3>Istana Ajaib</h3><p>Ketuk H, J, K, L, R</p></div>
+</div></div>
+</section>
+
+<section class="offer" id="beli">
+<div class="container center"><div class="eyebrow" style="background:#ffffff18;color:#fff">HARGA PENGENALAN</div><h2>Lengkapkan Pengembaraan Dengan RM10.90.</h2><p style="font-weight:800;font-size:18px">Berikan anak satu aktiviti digital yang menyeronokkan untuk diterokai.</p>
+<div class="offer-card"><div><div style="font-weight:900;color:#7b8495">PENGEMBARAAN KUCING</div><div class="offer-price">RM10.90</div><div style="font-weight:900">Sekali bayar</div></div>
+<div class="checks"><span>✓ 5 tahap permainan</span><span>✓ Huruf & nombor</span><span>✓ Arahan suara</span><span>✓ Aktiviti sentuh interaktif</span><span>✓ Sistem markah & kemajuan</span></div></div>
+<div class="buy"><a class="cta" href="https://toyyibpay.com/Pengembaraan-Abjad-dan-Nombor" target="_blank" rel="noopener">💳 BELI SEKARANG — RM10.90</a><div class="small">Gantikan pautan WhatsApp ini dengan nombor jualan anda.</div></div>
+</div></section>
+
+<section class="section"><div class="container"><div class="center"><div class="eyebrow-dark">SOALAN LAZIM</div><h2>Masih Nak Tahu?</h2></div><div class="faq">
+<details><summary>Apakah yang saya dapat dengan RM10.90?</summary><p>Sales page ini mempromosikan permainan Pengembaraan Kucing dengan 5 tahap, arahan suara, aktiviti interaktif dan sistem markah/kemajuan.</p></details>
+<details><summary>Adakah terdapat arahan suara?</summary><p>Ya. Permainan mempunyai arahan suara Bahasa Melayu seperti “Tangkap”, “Cari”, “Pecahkan”, “Tarik” dan “Ketuk”.</p></details>
+<details><summary>Apakah aktiviti dalam 5 tahap?</summary><p>Tangkap huruf, cari huruf, pecahkan nombor, tarik huruf dan ketuk huruf.</p></details>
+<details><summary>Adakah demo di atas permainan sebenar?</summary><p>Demo pada sales page ini ialah simulasi visual ringan. Ia sengaja tidak memuatkan game sebenar supaya sales page tidak crash dan boleh dibuka dengan lebih stabil.</p></details>
+</div></div></section>
+<footer>🐱 Pengembaraan Kucing · Belajar · Bermain · Teroka</footer>
+</body></html>
